@@ -26,6 +26,7 @@ $stmt->execute();
 $num = $stmt->rowCount();
 
 if ($num == 1) {
+    $_SESSION['username'] = $name;
     header('location:index.php');
 } else {
     header('location:login.php');

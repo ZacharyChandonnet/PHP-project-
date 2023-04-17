@@ -72,6 +72,10 @@ header {
 
   .nav-links ul {
     display: flex;
+
+    .in{
+      text-transform: uppercase;
+    }
   }
 
   .nav-links ul li {

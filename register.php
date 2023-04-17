@@ -27,7 +27,7 @@
                 <div class="form-group">
                     <i class="fa-solid fa-envelope"></i>
                     <label style="font-family:Complex;" for="new-email">Email</label>
-                    <input type="text" name="user" id="new-email" class="form-control" required>
+                    <input type="text" name="email" id="new-email" class="form-control" required>
                 </div>
 
                 <div class="form-group">

@@ -17,6 +17,7 @@ try {
 
 $name = $_POST['user'];
 $password = $_POST['password'];
+$email  = $_POST['email'];
 
 // Use prepared statements to prevent SQL injection
 $stmt = $pdo->prepare("SELECT * FROM usertable WHERE name = :name");
@@ -25,15 +26,19 @@ $stmt->execute();
 $num = $stmt->rowCount();
 
 if ($num == 1) {
-    echo "username Already taken!";
+    echo '<script>alert("Username already taken!");';
+    echo 'setTimeout(function() { window.location.href = "register.php"; }, 1);</script>'; // Redirect after 2 seconds
+    exit; // add exit after header to prevent further execution of the script
 } else {
-    $stmt = $pdo->prepare("INSERT INTO usertable (name, password) VALUES (:name, :password)");
+    $stmt = $pdo->prepare("INSERT INTO usertable (name, password, email) VALUES (:name, :password, :email)");
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':password', $password);
+    $stmt->bindParam(':email', $email);
     $stmt->execute();
-    header('location:index.php');
+    header('location:login.php');
     die;
 }
+
 
 
 ?>

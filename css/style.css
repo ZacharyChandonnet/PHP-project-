@@ -62,6 +62,9 @@ header h1 {
 .navbar .nav-links ul {
   display: flex;
 }
+.navbar .nav-links ul .in {
+  text-transform: uppercase;
+}
 .navbar .nav-links ul li {
   margin: 0 25px;
 }

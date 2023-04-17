@@ -24,23 +24,25 @@ if (isset($_GET["email_sent"]) && $_GET["email_sent"] == 1) {
     <nav class="navbar">
         <span class="logo">Suave</span>
         <div class="nav-links">
-            <ul>
-                <li><a href="#aboutUs">About us</a></li>
-                <li><a href="#services">Our services</a></li>
-                <li><a href="#artists">Our artists</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <?php
-                // Check if the user is logged in
-                if (isset($_SESSION['username'])) {
-                    // Display the username
-                    echo '<li><a href="profil.php">' . $_SESSION['username'] . '</a></li>';
-                } else {
-                    // Display the "Log in" link
-                    echo '<li><a href="login.php">Log in</a></li>';
-                }
-                ?>
-            </ul>
-        </div>
+    <ul>
+        <li><a href="#aboutUs">About us</a></li>
+        <li><a href="#services">Our services</a></li>
+        <li><a href="#artists">Our artists</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <?php
+        // Check if the user is logged in
+        session_start(); // Start the session
+        if (isset($_SESSION['username'])) {
+            // Display the username
+            echo '<li class="in"><a href="#">' . $_SESSION['username'] . '</a></li>';
+            echo '<li><a href="logout.php">' . 'Log out' . '</a></li>';
+        } else {
+            // Display the "Log in" link
+            echo '<li><a href="login.php">Log in</a></li>';
+        }
+        ?>
+    </ul>
+</div>
         <img src="/img/menu-btn.png" alt="menu hamburger" class="menu-ham">
     </nav>
     <header>
