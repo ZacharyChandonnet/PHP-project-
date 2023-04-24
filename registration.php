@@ -38,7 +38,4 @@ if ($num == 1) {
     header('location:login.php');
     die;
 }
-
-
-
 ?>
