@@ -22,7 +22,6 @@ $mail->Password = base64_decode("");
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->setFrom($email, $name);
-//$mail->addCustomHeader('Reply-To', 'heyzaliday@gmail.com');
 $mail->addAddress("sagsag9900@yopmail.com", "Zachary");
 
 $mail->Subject = $subject;
