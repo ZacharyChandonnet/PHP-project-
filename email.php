@@ -17,11 +17,12 @@ $mail->SMTPAuth = true;
 
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 587;
-$mail->Username = "";
-$mail->Password = base64_decode("");
+$mail->Username = "heyzaliday9900@gmail.com";
+$mail->Password = base64_decode("Ym9sbXBreXNjdXJxYmtibQ==");
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->setFrom($email, $name);
+//$mail->addCustomHeader('Reply-To', 'heyzaliday@gmail.com');
 $mail->addAddress("sagsag9900@yopmail.com", "Zachary");
 
 $mail->Subject = $subject;

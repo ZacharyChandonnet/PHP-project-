@@ -21,10 +21,10 @@ if (isset($_GET["email_sent"]) && $_GET["email_sent"] == 1) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <body>
-    <nav class="navbar">
-        <span class="logo">Suave</span>
-        <div class="nav-links">
-    <ul>
+  <nav class="navbar">
+    <span class="logo">Suave</span>
+    <div class="nav-links">
+      <ul>
         <li><a href="#aboutUs">About us</a></li>
         <li><a href="#services">Our services</a></li>
         <li><a href="#artists">Our artists</a></li>
@@ -33,21 +33,26 @@ if (isset($_GET["email_sent"]) && $_GET["email_sent"] == 1) {
         // Check if the user is logged in
         session_start(); // Start the session
         if (isset($_SESSION['username'])) {
-            // Display the username
-            echo '<li class="in"><a href="#">' . $_SESSION['username'] . '</a></li>';
-            echo '<li><a href="logout.php">' . 'Log out' . '</a></li>';
+          // Display the username
+          echo '<li class="in"><a href="#">' . $_SESSION['username'] . '</a></li>';
+          echo '<li><a href="logout.php">' . 'Log out' . '</a></li>';
         } else {
-            // Display the "Log in" link
-            echo '<li><a href="login.php">Log in</a></li>';
+          // Display the "Log in" link
+          echo '<li><a href="login.php">Log in</a></li>';
         }
         ?>
-    </ul>
-</div>
-        <img src="/img/menu-btn.png" alt="menu hamburger" class="menu-ham">
-    </nav>
-    <header>
-        <h1 class="slogan">Always fulfilling your <span style="color:#c99951;">expectations.</span></h1>
-    </header>
+      </ul>
+    </div>
+    <img src="/img/menu-btn.png" alt="menu hamburger" class="menu-ham">
+  </nav>
+
+  <header>
+    <video autoplay muted loop>
+      <source src="/img/header.mp4" type="video/mp4">
+    </video>
+    <h1 class="slogan">Always fulfilling your <span style="color:#c99951;">expectations.</span></h1>
+  </header>
+
     <main>
         <section id="aboutUs">
             <h1>Welcome to <span style="color:#c99951;">suave barber shop</span></h1>
